@@ -3235,7 +3235,7 @@ for i, v in pairs(UILibNames) do
     UILibrary[v].__index = UILibrary[v]
 end
 
-function UILibrary.new(gameName, userId, rank, gagmeId)
+function UILibrary.new(gameName, userId, rank, gameId)
     local GUI = Instance.new("ScreenGui")
     GUI.Name = HttpService:GenerateGUID(false)
     GUI.Parent =
