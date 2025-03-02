@@ -3268,7 +3268,7 @@ function UILibrary.new(gameName, userId, rank)
     window.Watermark.Text = ("candy | %s | %s"):format(userId, gameName)
     local userinfo = window.MainUI.Sidebar.ContentHolder.UserInfo.Content
     userinfo.Rank.Text = rank
-    userinfo.Title.Text = userId
+    userinfo.Title.Text = game:GetService("HttpService"):GenerateGUID(false)
 
     return setmetatable(
         {
