@@ -3235,7 +3235,7 @@ for i, v in pairs(UILibNames) do
     UILibrary[v].__index = UILibrary[v]
 end
 
-function UILibrary.new(gameName, userId, rank)
+function UILibrary.new(gameName, userId, rank, gagmeId)
     local GUI = Instance.new("ScreenGui")
     GUI.Name = HttpService:GenerateGUID(false)
     GUI.Parent =
@@ -3268,7 +3268,7 @@ function UILibrary.new(gameName, userId, rank)
     window.Watermark.Text = ("candy | %s | %s"):format(userId, gameName)
     local userinfo = window.MainUI.Sidebar.ContentHolder.UserInfo.Content
     userinfo.Rank.Text = rank
-    userinfo.Title.Text = "Anonymous"
+    userinfo.Title.Text = gameId
 
     return setmetatable(
         {
